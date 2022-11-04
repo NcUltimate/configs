@@ -8,6 +8,20 @@ source /usr/local/share/chruby/chruby.sh
 export HOMEBREW_NO_AUTO_UPDATE=1
 export PS1='\[\e[36m\]\u\[\e[97m\]@\[\e[32m\]macbook\[\e[97m\]$ '
 
+####### RC Commands #######
+
+loadrc() {
+  curl -sSL https://raw.githubusercontent.com/NcUltimate/configs/master/loadrc.sh | sh
+}
+
+dumprc() {
+  curl -sSL https://raw.githubusercontent.com/NcUltimate/configs/master/loadrc.sh | sh
+}
+
+addrc() {
+  curl -sSL https://raw.githubusercontent.com/NcUltimate/configs/master/addrc.sh | sh
+}
+
 ####### Misc Aliases #######
 alias ll='ls -Gal'
 alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
@@ -18,10 +32,6 @@ jsondiff() {
 
 derezz() {
   ffmpeg -i $1 -c:v libx264 -c:a mp2 -vf scale=1280x720 -crf 26 "$1.mp4"
-}
-
-loadrc() {
-  curl -sSL https://raw.githubusercontent.com/NcUltimate/configs/master/setup.sh | sh
 }
 
 

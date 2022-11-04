@@ -5,7 +5,7 @@
 
 ### First time setup:
 ```sh
-curl -sSL https://raw.githubusercontent.com/NcUltimate/configs/master/setup.sh | sh
+curl -sSL https://raw.githubusercontent.com/NcUltimate/configs/master/loadrc.sh | sh
 ```
 
 ### General Usage
