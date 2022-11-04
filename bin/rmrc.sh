@@ -17,7 +17,7 @@ echo
 echo "-- CD to $TMPDIR to commit changes --"
 cd $TMPDIR
 git add . -A
-git commit -m "addrc $1"
+git commit -m "rmrc $1"
 git push origin master
 
 # 4. Remove $TMPDIR
