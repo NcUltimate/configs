@@ -20,9 +20,8 @@ After running first time setup, the below commands are all you need to keep your
 
 1. Clone this repo into `/tmp/myconfigs`
 2. Copy all specified files in`.includes` from `$HOME` into `/tmp/myconfigs/rc`
-3. Add an auto-gen commit
-4. Push
-5. `rm /tmp/myconfigs`
+3. Add an auto-gen commit & push
+4. `rm /tmp/myconfigs`
 
 #### `addrc [FILE]`
 `$FILE` should be the name of a dir or file at $HOME. `addrc` will:
@@ -30,7 +29,15 @@ After running first time setup, the below commands are all you need to keep your
 1. Clone this repo into `tmp/myconfigs`
 2. Append the given file to `.includes`
 3. Copy `$FILE` into `rc/`
-4. Auto-gen a commit
-5. Push
+4. Auto-gen a commit & push
+5. `rm /tmp/myconfigs`
+
+#### `rmrc [FILE]`
+`$FILE` should be the name of a dir or file at $HOME. `rmrc` will:
+
+1. Clone this repo into `tmp/myconfigs`
+2. Remove the given file from `.includes`
+3. Remove `$FILE` from `rc/`
+4. Auto-gen a commit & push
 6. `rm /tmp/myconfigs`
 
