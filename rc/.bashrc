@@ -9,23 +9,20 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 export PS1='\[\e[36m\]\u\[\e[97m\]@\[\e[32m\]macbook\[\e[97m\]$ '
 
 ####### RC Commands #######
-
-runrccmd() {
-  curl -sSL https://raw.githubusercontent.com/NcUltimate/configs/master/bin/$1rc.sh > /tmp/$1rc.sh
-  chmod +x /tmp/$1rc.sh
-  /tmp/$1rc.sh $2
-  rm /tmp/$1rc.sh
+loadrc() {
+  curl -sSL https://raw.githubusercontent.com/NcUltimate/configs/master/bin/loadrc.sh | sh
 }
 
-alias loadrc='runrccmd load'
-alias dumprc='runrccmd dump'
+dumprc() {
+  curl -sSL https://raw.githubusercontent.com/NcUltimate/configs/master/bin/dumprc.sh | sh
+}
 
 addrc() {
-  runrccmd add $1
+  curl -sSL https://raw.githubusercontent.com/NcUltimate/configs/master/bin/addrc.sh | sh -s -- $1
 }
 
 rmrc() {
-  runrccmd rm $1
+  curl -sSL https://raw.githubusercontent.com/NcUltimate/configs/master/bin/rmrc.sh | sh -s -- $1
 }
 
 ####### Misc Aliases #######
