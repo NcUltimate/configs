@@ -22,6 +22,10 @@ addrc() {
   curl -sSL https://raw.githubusercontent.com/NcUltimate/configs/master/bin/addrc.sh | sh
 }
 
+rmrc() {
+  curl -sSL https://raw.githubusercontent.com/NcUltimate/configs/master/bin/rmrc.sh | sh
+}
+
 ####### Misc Aliases #######
 alias ll='ls -Gal'
 alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
