@@ -3,7 +3,7 @@
 
 ## Usage
 ```sh
-git clone https://github.com/NcUltimate/configs.git
-cp configs/.* ~
+git clone https://github.com/NcUltimate/configs.git /tmp
+cp /tmp/configs/.* ~
 sudo rm -rf configs
 ```
