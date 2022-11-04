@@ -16,7 +16,7 @@ fi
 # 3. Recursively copy everything from /tmp/myconfigs/.includes into $HOME directory
 echo
 echo "-- Copying files into $HOME --"
-cp -Rv $TMPDIR/rc/ $HOME
+cp -Rv $TMPDIR/rc/* $HOME
 
 # 4. Remove cloned configs repo
 echo
