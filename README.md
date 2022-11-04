@@ -16,8 +16,21 @@ After running first time setup, the below commands are all you need to keep your
 `loadrc` simply runs the above command to load the latest rc files from this repo.
 
 #### `dumprc`
-`dumprc` will clone this repo, cp all `.includes` files into that dir, add an auto-gen commit, and push.
+`dumprc` will:
 
-#### `addrc`
-`addrc [FILE]` will clone this repo, append the given file to the `.includes`, auto-gen a commit, and push.
+1. Clone this repo into `/tmp/myconfigs`
+2. Copy all specified files in`.includes` from `$HOME` into `/tmp/myconfigs/rc`
+3. Add an auto-gen commit
+4. Push
+5. `rm /tmp/myconfigs`
+
+#### `addrc [FILE]`
+`$FILE` should be the name of a dir or file at $HOME. `addrc` will:
+
+1. Clone this repo into `tmp/myconfigs`
+2. Append the given file to `.includes`
+3. Copy `$FILE` into `rc/`
+4. Auto-gen a commit
+5. Push
+6. `rm /tmp/myconfigs`
 
