@@ -3,4 +3,4 @@
 .vimrc
 .zshrc
 .qualiarc
-.gitignore
+.gitignore-global

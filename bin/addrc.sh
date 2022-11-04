@@ -4,17 +4,17 @@ TMPDIR=/tmp/myconfigs
 echo "-- Cloning configs into $TMPDIR --"
 git clone git@github.com:NcUltimate/configs.git $TMPDIR
 
-# 2. Copy all .include-ed files into $TMPDIR
+# 2. Append file ($1) to .includes
 echo
-echo "-- Copying files into $TMPDIR --"
-cp -Rv $(cat $TMPDIR/.includes | sed s_^_$HOME/_g) $TMPDIR
+echo "-- Appending file "$1" to $TMPDIR/.includes --"
+echo $1 >> $TMPDIR/.includes
 
 # 3. Go to $TMPDIR to commit changed files
 echo
 echo "-- CD to $TMPDIR to commit changes --"
 cd $TMPDIR
-git add . -A
-git commit -m "$(date "+%Y%m%d%H%M%S_dumprc")"
+git add .includes
+git commit -m "addrc $1"
 git push origin master
 
 # 4. Remove $TMPDIR
