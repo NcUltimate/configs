@@ -10,20 +10,22 @@ export PS1='\[\e[36m\]\u\[\e[97m\]@\[\e[32m\]macbook\[\e[97m\]$ '
 
 ####### RC Commands #######
 
-loadrc() {
-  curl -sSL https://raw.githubusercontent.com/NcUltimate/configs/master/bin/loadrc.sh | sh
+runrccmd() {
+  curl -sSL https://raw.githubusercontent.com/NcUltimate/configs/master/bin/$1rc.sh > /tmp/$1rc.sh
+  chmod +x /tmp/$1rc.sh
+  /tmp/$1rc.sh $2
+  rm /tmp/$1rc.sh
 }
 
-dumprc() {
-  curl -sSL https://raw.githubusercontent.com/NcUltimate/configs/master/bin/dumprc.sh | sh
-}
+alias loadrc='runrccmd load'
+alias dumprc='runrccmd dump'
 
 addrc() {
-  curl -sSL https://raw.githubusercontent.com/NcUltimate/configs/master/bin/addrc.sh | sh
+  runrccmd add $1
 }
 
 rmrc() {
-  curl -sSL https://raw.githubusercontent.com/NcUltimate/configs/master/bin/rmrc.sh | sh
+  runrccmd rm $1
 }
 
 ####### Misc Aliases #######
