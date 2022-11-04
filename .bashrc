@@ -15,7 +15,7 @@ loadrc() {
 }
 
 dumprc() {
-  curl -sSL https://raw.githubusercontent.com/NcUltimate/configs/master/loadrc.sh | sh
+  curl -sSL https://raw.githubusercontent.com/NcUltimate/configs/master/dumprc.sh | sh
 }
 
 addrc() {

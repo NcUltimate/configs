@@ -2,7 +2,7 @@ TMPDIR=/tmp/myconfigs
 
 # 1. Clone the configs repo into /tmp/myconfigs
 echo "-- Cloning configs into $TMPDIR --"
-git clone https://github.com/NcUltimate/configs.git $TMPDIR
+git clone git@github.com:NcUltimate/configs.git $TMPDIR
 
 # 2. Make sure all /tmp/myconfigs/.includes directory paths exist
 DIRS=$(cat $TMPDIR/.includes | egrep /. | xargs dirname | sed s_^_$HOME/_g)
