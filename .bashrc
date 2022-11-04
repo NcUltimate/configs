@@ -13,7 +13,7 @@ alias ll='ls -Gal'
 alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
 
 jsondiff() {
-  diff -y <(jq --sort-keys < $1) <(jq --sort-keys < $2) | colordiff | less -R
+  diff -y < $(jq --sort-keys < $1) < $(jq --sort-keys < $2) | colordiff | less -R
 }
 
 derezz() {
