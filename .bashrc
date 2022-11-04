@@ -20,6 +20,10 @@ derezz() {
   ffmpeg -i $1 -c:v libx264 -c:a mp2 -vf scale=1280x720 -crf 26 "$1.mp4"
 }
 
+loadrc() {
+  curl -sSL https://raw.githubusercontent.com/NcUltimate/configs/master/setup.sh | sh
+}
+
 
 ####### Git Aliases ########
 alias ga='git add'
