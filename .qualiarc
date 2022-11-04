@@ -1,0 +1,8 @@
+alias vboxmanage=VBoxManage
+
+####### Exports #######
+alias qsh='qli meteor --service qualia'
+alias qtest='qli lucky test -p'
+alias qup='qli up -s qualia,dev-dns,mongo0,redis'
+alias qup-doc='qli up -s qualia,dev-dns,mongo0,redis,webdav,huddy,undertaker'
+alias qup-con='qli up -s qualia,dev-dns,mongo0,redis,webdav,huddy,undertaker,connect'
