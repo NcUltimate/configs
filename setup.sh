@@ -20,4 +20,6 @@ cp -Rv $(cat $TMPDIR/.includes | sed s_^_$TMPDIR/_g) ~
 echo "-- Cleanup - Removing $TMPDIR --"
 sudo rm -rf $TMPDIRo
 
+# 5. Source changes
+echo "-- Sourcing new changes --"
 source ~/.zshrc
