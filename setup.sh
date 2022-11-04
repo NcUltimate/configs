@@ -18,7 +18,7 @@ cp -Rv $(cat $TMPDIR/.includes | sed s_^_$TMPDIR/_g) ~
 
 # 4. Remove cloned configs repo
 echo "-- Cleanup - Removing $TMPDIR --"
-sudo rm -rf $TMPDIRo
+sudo rm -rf $TMPDIR
 
 # 5. Source changes
 echo "-- Sourcing new changes --"
