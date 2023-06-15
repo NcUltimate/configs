@@ -2,7 +2,9 @@ if [ -f ~/.git-completion.zsh ]; then
    . ~/.git-completion.zsh
 fi
 
-source /usr/local/share/chruby/chruby.sh
+if [ -f /usr/local/share/chruby/chruby.sh ]; then
+  . /usr/local/share/chruby/chruby.sh
+fi
 
 ####### Exports #######
 export HOMEBREW_NO_AUTO_UPDATE=1
@@ -49,4 +51,11 @@ alias gs='git status'
 alias gl='git log --oneline'
 
 ####### Runtime #######
-cd ~/Workspace
+if [ -d /Workspace ]; then
+  cd ~/Workspace
+elif [ -d ~/src/qualia ]; then
+  cd ~/src/qualia/services/qualia
+else
+  cd ~
+fi
+

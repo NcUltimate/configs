@@ -3,5 +3,6 @@
 .vimrc
 .zshrc
 .qualiarc
+.gitconfig
 .gitignore-global
 .bash_profile

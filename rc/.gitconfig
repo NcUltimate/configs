@@ -1,0 +1,7 @@
+[user]
+	name = Joseph Klemen
+	email = joe.klemen@qualia.com
+[core]
+	excludesfile = /home/vagrant/.gitignore-global
+	alwaysShowDotfiles = true
+	editor = vim

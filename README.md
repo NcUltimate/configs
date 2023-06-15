@@ -4,6 +4,14 @@
 ## Usage
 
 ### First time setup:
+
+This repo manipulates dotfiles. Run with caution. You will need to configure git
+to clone dotfiles, possibly globally, with:
+```sh
+git config --global core.alwaysShowDotfiles true
+```
+
+Then, run:
 ```sh
 curl -sSL https://raw.githubusercontent.com/NcUltimate/configs/master/setup.sh | sh
 ```
