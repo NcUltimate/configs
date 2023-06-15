@@ -13,7 +13,7 @@ git config --global core.alwaysShowDotfiles true
 
 Then, run:
 ```sh
-curl -sSL https://raw.githubusercontent.com/NcUltimate/configs/master/setup.sh | sh
+curl -sSL https://raw.githubusercontent.com/NcUltimate/configs/master/bin/setup.sh | sh
 ```
 
 ### General Usage
